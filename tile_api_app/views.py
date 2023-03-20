@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from rest_framework import routers
+from .serializers import TaskViewSet, TileViewSet
 
-# Create your views here.
+router = routers.DefaultRouter()
+router.register(r'tasks', TaskViewSet)
+router.register(r'tiles', TileViewSet)
